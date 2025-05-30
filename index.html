@@ -40,12 +40,18 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 400px;
+            margin: 20px;
+        }
         .hero img {
             max-width: 400px;
             width: 100%;
             height: auto;
             border-radius: 10px;
-            margin: 20px;
             object-fit: cover;
         }
         .hero-content {
@@ -130,16 +136,6 @@
             header h1 {
                 font-size: 2em;
             }
-            .hero-content h2 {
-                font-size: 1.8em;
-            }
-            .hero-content p {
-                font-size: 1em;
-            }
-            .btn {
-                padding: 15px 30px;
-                font-size: 1em;
-            }
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -156,6 +152,16 @@
                 text-align: center;
                 width: 100%;
             }
+            .hero-image {
+                margin: 0;
+                width: 100%;
+                justify-content: center;
+            }
+            .hero img, .card img, .before-after img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
             .before-after {
                 flex-direction: column;
                 gap: 15px;
@@ -163,11 +169,6 @@
             .benefits, .recipes {
                 flex-direction: column;
                 gap: 15px;
-            }
-            .hero img, .card img, .before-after img {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
             }
         }
     </style>
@@ -181,7 +182,9 @@
 
 <div class="container">
     <div class="hero">
-        <img src="ebook-capa.png" alt="Capa do eBook">
+        <div class="hero-image">
+            <img src="ebook-capa.png" alt="Capa do eBook">
+        </div>
         <div class="hero-content">
             <h2>Emagreça comendo bem!</h2>
             <p>Receitas práticas, deliciosas e saudáveis para acelerar seu emagrecimento sem dietas malucas e sem passar fome.</p>
