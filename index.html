@@ -21,6 +21,10 @@
             margin: 0;
             font-size: 2.5em;
         }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
+        }
         .container {
             max-width: 1200px;
             margin: auto;
@@ -38,11 +42,13 @@
         }
         .hero img {
             max-width: 400px;
+            width: 100%;
             border-radius: 10px;
             margin: 20px;
         }
         .hero-content {
             max-width: 500px;
+            margin: 20px;
         }
         .hero-content h2 {
             color: #333;
@@ -96,9 +102,14 @@
             padding: 20px;
             border-radius: 10px;
             flex: 1 1 300px;
+            box-sizing: border-box;
         }
         .card img {
             width: 100%;
+            border-radius: 10px;
+        }
+        .before-after img {
+            max-width: 100%;
             border-radius: 10px;
         }
         footer {
@@ -106,6 +117,38 @@
             color: white;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .hero-content h2 {
+                font-size: 1.8em;
+            }
+            .hero-content p {
+                font-size: 1em;
+            }
+            .btn {
+                padding: 15px 30px;
+                font-size: 1em;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                margin: 0;
+            }
+            .before-after {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .benefits, .recipes {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
